@@ -20,8 +20,8 @@ describe('Validate Login Functionality for Valid and Invalid Credentials', () =>
 
     it('Verify login fails with invalid credentials', () => {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-        cy.get('[name="username"]').type('InvalidUser');
-        cy.get('[name="password"]').type('admin123');
+        cy.get('[name="username"]').type('Admin');
+        cy.get('[name="password"]').type('wrongpassword');
         cy.get('.oxd-button.oxd-button--medium.oxd-button--main.orangehrm-login-button').click();
         cy.get('.oxd-alert-content').should('contain.text', 'Invalid credentials');
     });
