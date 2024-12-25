@@ -1,4 +1,4 @@
-import LoginPOM from "../../e2e/orangeHRM/loginPage/LoginPOM";
+import LoginPOM from './LoginPOM';
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     console.error(err);
